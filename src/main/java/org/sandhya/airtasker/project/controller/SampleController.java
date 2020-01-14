@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SampleController {
 
-
-    @RequestMapping("/test")
+    @RequestMapping("/hello")
     public ResponseEntity<String> getPerson(@RequestParam(value="name", defaultValue="World") String name) {
         return ResponseEntity.status(HttpStatus.OK).
-                body("Hello World " + name + " " + System.currentTimeMillis() );
+                body("Hello " + name + " " + System.currentTimeMillis() );
     }
 
 

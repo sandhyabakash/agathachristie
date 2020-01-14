@@ -24,8 +24,8 @@ public class RateLimitServiceConfig implements WebMvcConfigurer {
     }
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(apiKeyCheckInterceptor());
-        registry.addInterceptor(rateLimitInterceptor()).addPathPatterns("/test");
+        registry.addInterceptor(apiKeyCheckInterceptor()).addPathPatterns("/hello");
+        registry.addInterceptor(rateLimitInterceptor()).addPathPatterns("/hello");
     }
 
     @Bean
